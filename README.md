@@ -1,2 +1,2 @@
-# JAVA-Simple-Market
+# JAVA-API-SimpleMarket
 Simple Market API built in Spring with Lombok, H2 Database, MVC architecture and more ...
