@@ -96,29 +96,34 @@ public class ProductServiceImplementation implements ProductService {
             throw new ResourceNotFoundException("Product not found");
         }
 
-        if (dto.name() != null) {
-            product.get().setName(dto.name());
-        } else {
-            product.get().setName(product.get().getName());
-        }
+//        if (dto.name() != null) {
+//            product.get().setName(dto.name());
+//        } else {
+//            product.get().setName(product.get().getName());
+//        }
+//
+//        if (dto.brand() != null) {
+//            product.get().setBrand(dto.brand());
+//        } else {
+//            product.get().setBrand(product.get().getBrand());
+//        }
+//
+//        if (dto.quantity() != null) {
+//            product.get().setQuantity(dto.quantity());
+//        } else {
+//            product.get().setQuantity(product.get().getQuantity());
+//        }
+//
+//        if (dto.price() != null) {
+//            product.get().setPrice(dto.price());
+//        } else {
+//            product.get().setPrice(product.get().getPrice());
+//        }
 
-        if (dto.brand() != null) {
-            product.get().setBrand(dto.brand());
-        } else {
-            product.get().setBrand(product.get().getBrand());
-        }
-
-        if (dto.quantity() != null) {
-            product.get().setQuantity(dto.quantity());
-        } else {
-            product.get().setQuantity(product.get().getQuantity());
-        }
-
-        if (dto.price() != null) {
-            product.get().setPrice(dto.price());
-        } else {
-            product.get().setPrice(product.get().getPrice());
-        }
+        product.get().setName(dto.name() != null ? dto.name() : product.get().getName());
+        product.get().setBrand(dto.brand() != null ? dto.brand() : product.get().getBrand());
+        product.get().setQuantity(dto.quantity() != null ? dto.quantity() : product.get().getQuantity());
+        product.get().setPrice(dto.price() != null ? dto.price() : product.get().getPrice());
 
         logger.info("\u001B[34mUpdating product: " + id);
         repository.save(product.get());
