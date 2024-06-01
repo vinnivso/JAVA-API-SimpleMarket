@@ -22,8 +22,8 @@ Os conteúdos principais  a serem estudados são:
 Docker
 
 # executando o projeto
-docker build -t simple-market-api:1.0 .
-docker run -p 8081:8081 simple-market-api:1.0
+docker build -t backend-simplemarket:1.0 .
+docker run -p 8081:8081 backend-simplemarket:1.0
 
 #obs: Para o funcionamento da API de forma como planejada é necessário estar com o Docker instalado. Execute os comandos acima partindo da raiz do projeto.
 ```
