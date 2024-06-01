@@ -1,4 +1,4 @@
-# **Projeto SIMPLE MARKET API**
+# **Projeto SIMPLE MARKET**
 
 ## 📖 Introdução
 
